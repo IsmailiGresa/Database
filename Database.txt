@@ -1,0 +1,22 @@
+Primary Key (Value)
+Foreign Key (Value)
+Unique (Value)
+Can be Null (Value)
+
+Reader(Identif:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
+
+ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
+
+Worker(worker_ID:integer, wroker_Name:string, worker_Lastname:string, worker_Rank:string, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Salary:integer)
+
+Book(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:integer)
+
+Borrowed(borrow_Book:integer, borrow_Reader:integer, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:string)
+
+Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:integer, archive_Reader:integer)
+
+DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date, damage_Register:integer)
+
+
+
+
