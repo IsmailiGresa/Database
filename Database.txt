@@ -31,5 +31,39 @@ Reader(10, Ledion, Neziri, Bejte, M, 1999-05-28, Kosovo, Lipjan, Haxhi Zeka, 190
 Reader(11, Dardan, Gashi, Suad, M, 2001-07-26, Kosovo, Skenderaj, Xhelal Preveza, 14000, +38349383988/FAX:038329879, dardangashi05@live.com , Student)
 Reader(12, Gezime, Krasniqi, Fadil, F, 2003-05-17, Kosovo, Kline, Fuad Dibra, 17600, +38349438298/FAX:038328948, gezimekras4@live.com , Student)
 
+ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
+
+ReaderDetails(111, 022, 2020-05-17, 25, Agron, 2023-05-17)
+ReaderDetails(211, 044, 2021-07-26, 25, Rajmonda, 2024-07-26)
+ReaderDetails(311, 044, 2020-05-28, 25, Rajmonda, 2023-05-28)
+ReaderDetails(411, 033, 2021-04-19, 25, Jeta, 2024-04-19)
+ReaderDetails(511, 022, 2020-11-29, 25, Agron, 2023-11-29)
+ReaderDetails(611, 033, 2019-09-13, 25, Jeta, 2022-09-13)
+ReaderDetails(711, 055, 2019-05-28, 25, Dion, 2022-05-28)
+ReaderDetails(811, 055, 2020-09-15, 25, Dion, 2023-09-15)
+ReaderDetails(911, 066, 2019-11-25, 25, Albi, 2022-11-25)
+ReaderDetails(101, 011, 2021-04-12, 25, Bledi, 2024-04-12)
+ReaderDetails(111, 011, 2020-09-11, 25, Bledi, 2023-09-11)
+ReaderDetails(121, 022, 2021-02-05, 25, Agron, 2024-02-05)
+
+Worker(worker_ID:integer, wroker_Name:string, worker_Lastname:string, worker_Rank:string, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Salary:integer)
+
+Worker(011, Bledi, Bekteshi, Librarian, Kosovo, Prishtine, Agon Ramadani, 15000, +38349329921/FAX:038321193, blendib@hotmail.com , 550)
+Worker(022, Agron, Veliu, Librarian, Kosovo, Peje, Vellezerit Frasheri, 20000, +38344328939/FAX:038558292, aagronn@live.com , 550)
+Worker(033, Jeta, Berisha, Librarian, Kosovo, Gjakove, Shaban  Kamberi, 13000, +38344243002/FAX:038003424, berishajeta@outlook.com , 550)
+Worker(044, Rajmonda, Selimi, Librarian, Kosovo, Prishtine, Pjeter Budi, 10000, +38349298269/FAX:0388933939, rajomnda22@live.com , 550)
+Worker(055, Dion, Ademi, Librarian, Kosovo, Gjilan, Nazim Gafurri, 16000, +38344325623/FAX:0382389233, dion337@hotmail.com , 550)
+Worker(066, Albi, Jashari, Librarian, Kosovo, Ferizaj, Gazmend Zeqiri, 18000, +38344498809/FAX:038342343, jasharialbi@live.com , 550)
+Worker(077, Artan, Gashi, Technician, Kosovo, Prishtine, Armend Daci, 10000, +38346114389/FAX:038328838, agashhi@live.com ,530)
+Worker(088, Zana, Rama, Janitor, Single, Kosovo, Vushtrri, Vellusha, 17000, +38349385273/FAX:038732383, rzana@hotmail.com , 350)
+Worker(099, Ana, Bejta, Assistant, Kosovo, Fushekosove, Haxhi Zeka, 19000, +38344238729/FAX:038221288, anaa2@hotmail.com , 450)
+Worker(010, Ariana, Gashi, Assistant, Kosovo, Skenderaj, Adem Jashari, 14000, +38349383921/FAX:038376879, arianagashi05@live.com , 450)
 
 
+
+
+Relational Algebra
+
+1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
+ ( Reader)
+2. Cilët lexues (Emrin dhe Mbiemrin e tyre) kanë huazuar te pakten dy libra gjate vitit 2020?
