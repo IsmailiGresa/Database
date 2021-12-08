@@ -59,6 +59,25 @@ Worker(088, Zana, Rama, Janitor, Single, Kosovo, Vushtrri, Vellusha, 17000, +383
 Worker(099, Ana, Bejta, Assistant, Kosovo, Fushekosove, Haxhi Zeka, 19000, +38344238729/FAX:038221288, anaa2@hotmail.com , 450)
 Worker(010, Ariana, Gashi, Assistant, Kosovo, Skenderaj, Adem Jashari, 14000, +38349383921/FAX:038376879, arianagashi05@live.com , 450)
 
+Book(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:string)
+
+Book(0003, 011, The Road, Cormac McCarthy, 80, 2020-01-05, Bledi)
+Book(0007, 022, Life After Life, Kate Atkinson, 80, 2020-02-05, Agron)
+Book(0005, 033, Darkmans, Nicola Braker, 75, 2021-08-05, Jeta)
+Book(0006, 044, The Siege, Helen Dunmore, 90, 2021-04-05, Rajmonda)
+Book(0011, 055, Bad Blood, Lorna Sage, 85, 2020-01-05, Dion)
+Book(0004, 066, The God Delusion, Richard Dawkins, 100, 2021-04-05, Albi)
+Book(0023, 066, Wolf Hall, Hilary Mantel, 95, 2021-04-05, Albi)
+Book(0056, 022, Outline by Rachel, Cusk, 80, 2020-01-05, Agron)
+Book(0008, 033, On Writing, Stephen King, 85, 2020-02-05, Jeta)
+Book(0002, 044, The House of Grief, Helen Garner, 75, 2020-02-05, Rajmonda)
+Book(0045, 055, Underland, Robert Macfarlane, 85, 2020-01-05, Dion)
+Book(0009, 044, Women & Power, Mary Beard, 95, 2020-02-05, Rajmonda)
+Book(0021, 055, Night Watch, Terry Pratchett, 90, 2020-01-05, Dion)
+Book(0099, 066, Levels of Life, Julian Barnes, 85, 2021-04-05, Albi)
+Book(0076, 066, The Noonday Demon, Andrew Solomon, 75, 2021-04-05, Albi)
+
+
 
 
 
