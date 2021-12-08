@@ -2,7 +2,6 @@ Primary Key (Value)
 Foreign Key (Value)
 Unique (Value)
 Can be Null (Value)
-
 Reader(Identif:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
 
 ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
@@ -17,6 +16,20 @@ Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:int
 
 DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date, damage_Register:integer)
 
+Reader Relation:
+Reader(Identif:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
+Reader(1, Lea, Kamberi, Idriz, F, 1997-09-15,  Kosove, Ferizaj, Besim Hyseni, 12000, +38344832979/FAX:038238293, leakamberi1@gmail.com , Student)
+Reader(2, Arta, Bekteshi, Fatos, F, 2000-03-19, Kosovo, Peje, Agim Ramadani, 15000, +38349321321/FAX:038324893, aarta3@hotmail.com , Student)
+Reader(3, Driton, Kryeziu, Ilaz, M, 1999-08-12, Kosovo, Prizren, Vellezerit Frasheri, 20000, +37744328239/FAX:038348292, ddritonn@live.com , Student)
+Reader(4, Drita, Berisha, Edison, F, 1999-09-13, Kosovo, Gjakove, Shaip  Kamberi, 13000, +37744243222/FAX:038423424, berishadrita@outlook.com , Student)
+Reader(5, Morea, Selimi, Shpend, F, 1998-10-19, Kosovo, Prishtine, Pjeter Budi, 10000, +377298289/FAX:0388973939, morea22@live.com , Student)
+Reader(6, Ilir, Morina, Armend, M, 1997-12-29, Kosovo, Gjilan, Nazim Gafurri, 16000, +383443284923/FAX:0382389233, ilirmorinna@hotmail.com , Student)
+Reader(7, Agon, Jashari, Hamdi, M, 2000-11-29, Kosovo, Drenas, Gazmend Zajmi, 18000, +377444932809/FAX:038342343, jashariagon@live.com , Student)
+Reader(8, Era, Gashi, Erion ,F, 2002-10-27, Kosovo, Prishtine, Armend Daci, 10000, +38346384389/FAX:038329238, eeragashh@live.com , Student)
+Reader(9, Dion, Dili, Valdet, M, 1998-04-19, Single, Kosovo, Vushtrri, Vellusha, 17000, +377493839273/FAX:038777383, ddili@hotmail.com , Student)
+Reader(10, Ledion, Neziri, Bejte, M, 1999-05-28, Kosovo, Lipjan, Haxhi Zeka, 19000, +377442389329/FAX:038289288, leddion@hotmail.com , Student)
+Reader(11, Dardan, Gashi, Suad, M, 2001-07-26, Kosovo, Skenderaj, Xhelal Preveza, 14000, +38349383988/FAX:038329879, dardangashi05@live.com , Student)
+Reader(12, Gezime, Krasniqi, Fadil, F, 2003-05-17, Kosovo, Kline, Fuad Dibra, 17600, +38349438298/FAX:038328948, gezimekras4@live.com , Student)
 
 
 
