@@ -26,7 +26,7 @@ Reader(5, Morea, Selimi, Shpend, F, 1998-10-19, Kosovo, Prishtine, Pjeter Budi, 
 Reader(6, Ilir, Morina, Armend, M, 1997-12-29, Kosovo, Gjilan, Nazim Gafurri, 16000, +383443284923/FAX:0382389233, ilirmorinna@hotmail.com , Student)
 Reader(7, Agon, Jashari, Hamdi, M, 2000-11-29, Kosovo, Drenas, Gazmend Zajmi, 18000, +377444932809/FAX:038342343, jashariagon@live.com , Student)
 Reader(8, Era, Gashi, Erion ,F, 2002-10-27, Kosovo, Prishtine, Armend Daci, 10000, +38346384389/FAX:038329238, eeragashh@live.com , Student)
-Reader(9, Dion, Dili, Valdet, M, 1998-04-19, Single, Kosovo, Vushtrri, Vellusha, 17000, +377493839273/FAX:038777383, ddili@hotmail.com , Student)
+Reader(9, Dion, Dili, Valdet, M, 1998-04-19, Kosovo, Vushtrri, Vellusha, 17000, +377493839273/FAX:038777383, ddili@hotmail.com , Student)
 Reader(10, Ledion, Neziri, Bejte, M, 1999-05-28, Kosovo, Lipjan, Haxhi Zeka, 19000, +377442389329/FAX:038289288, leddion@hotmail.com , Student)
 Reader(11, Dardan, Gashi, Suad, M, 2001-07-26, Kosovo, Skenderaj, Xhelal Preveza, 14000, +38349383988/FAX:038329879, dardangashi05@live.com , Student)
 Reader(12, Gezime, Krasniqi, Fadil, F, 2003-05-17, Kosovo, Kline, Fuad Dibra, 17600, +38349438298/FAX:038328948, gezimekras4@live.com , Student)
@@ -80,18 +80,19 @@ Book(0076, 066, The Noonday Demon, Andrew Solomon, 75, 2021-04-05, Albi)
 
 Borrowed(borrow_Book:integer, borrow_Reader:integer, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:string)
 
-Borrowed(00766, 111, 2021-11-17, 2021-12-01, 022, Not Damaged)
-Borrowed(00999, 211, 2021-11-26, 2021-12-10, 044, Damaged)
-Borrowed(00211, 311, 2021-11-28, 2021-12-12, 044, Not Damaged)
-Borrowed(00099, 411, 2021-11-19, 2021-11-25, 033, Not Damaged)
+Borrowed(00766, 111, 2020-11-17, 2020-12-01, 022, Not Damaged)
+Borrowed(00999, 211, 2020-11-26, 2020-12-10, 044, Damaged)
+Borrowed(00211, 311, 2019-11-28, 2019-12-12, 044, Not Damaged)
+Borrowed(00099, 411, 2019-11-19, 2019-11-25, 033, Not Damaged)
 Borrowed(00455, 511, 2021-11-29, 2021-12-13, 022, Not Damaged)
 Borrowed(00022, 611, 2021-11-13, 2021-11-27, 033, Damaged)
-Borrowed(00088, 711, 2021-11-28, 2021-12-12, 055, Not Damaged)
-Borrowed(00044, 811, 2021-11-15, 2021-11-29, 055, Not Damaged)
+Borrowed(00088, 711, 2020-11-28, 2020-12-12, 055, Not Damaged)
+Borrowed(00044, 811, 2019-11-15, 2019-11-29, 055, Not Damaged)
 Borrowed(00111, 911, 2021-11-25, 2021-12-09, 066, Not Damaged)
 Borrowed(00233, 101, 2021-11-12, 2021-11-26, 011, Damaged)
-Borrowed(00033, 111, 2021-11-11, 2021-11-25, 011, Not Damaged)
+Borrowed(00033, 111, 2020-11-11, 2020-11-25, 011, Not Damaged)
 Borrowed(00077, 121, 2021-11-05, 2021-11-19, 022, Not Damaged)
+Borrowed(00766, 111, 2020-11-27, 2020-12-01, 022, Not Damaged)
 
 Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:string, archive_Reader:string)
 
@@ -138,3 +139,24 @@ Relational Algebra
 1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
  ( Reader)
 2. Cilët lexues (Emrin dhe Mbiemrin e tyre) kanë huazuar te pakten dy libra gjate vitit 2020?
+
+
+Datalog
+
+%reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,State,City,Street,ZIPCode,Phone,Email,Profession).
+reader(1, lea, kamberi, idriz, f, '1997-09-15', kosovo, ferizaj, besim_hyseni, 12000, '+38344832979/FAX:038238293', 'leakamberi1@gmail.com', student) .
+reader(2, arta, bekteshi, fatos, f, '2000-03-19', kosovo, peje, agim_ramadani, 15000, '+38349321321/FAX:038324893', 'aarta3@hotmail.com', student) .
+reader(3, driton, kryeziu, ilaz, m, '1999-08-12', kosovo, prizren, vellezerit_frasheri, 20000, '+37744328239/FAX:038348292', 'ddritonn@live.com', student) .
+reader(4, drita, berisha, edison, f, '1999-09-13', kosovo, gjakove, shaip_kamberi, 13000, '+37744243222/FAX:038423424', 'berishadrita@outlook.com', student) .
+reader(5, morea, selimi, shpend, f, '1998-10-19', kosovo, prishtine, pjeter_budi, 10000, '+377298289/FAX:0388973939', 'morea22@live.com', student) .
+reader(6, ilir, morina, armend, m, '1997-12-29', kosovo, gjilan, nazim_gafurri, 16000, '+383443284923/FAX:0382389233', 'ilirmorinna@hotmail.com', student) .
+reader(7, agon, jashari, hamdi, m, '2000-11-29', kosovo, drenas, gazmend_zajmi, 18000, '+377444932809/FAX:038342343', 'jashariagon@live.com', student) .
+reader(8, era, gashi, erion, f, '2002-10-27', kosovo, prishtine, armend_daci, 10000, '+38346384389/FAX:038329238', 'eeragashh@live.com', student) .
+reader(9, dion, dili, valdet, m, '1998-04-19', kosovo, vushtrri, vellusha, 17000, '+377493839273/FAX:038777383', 'ddili@hotmail.com', student) .
+reader(10, ledion, neziri, bejte, m, '1999-05-28', kosovo, lipjan, haxhi_zeka, 19000, '+377442389329/FAX:038289288', 'leddion@hotmail.com', student) .
+reader(11, dardan, gashi, suad, m, '2001-07-26', kosovo, skenderaj, xhelal_preveza, 14000, '+38349383988/FAX:038329879', 'dardangashi05@live.com', student) .
+reader(12, gezime, krasniqi, fadil, f, '2003-05-17', kosovo, kline, fuad_dibra, 17600, '+38349438298/FAX:038328948', 'gezimekras4@live.com', student) .
+
+query1(ID,Name,Lastname):-reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,State,City,Street,ZIPCode,Phone,Email,Profession),City='prishtine'.
+
+
