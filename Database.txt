@@ -168,8 +168,8 @@ readerDetails(611, 033, dardan gashi, '2019-09-13', 25, jeta, '2022-09-13').
 readerDetails(711, 055, ilir morina, '2019-05-28', 25, dion, '2022-05-28').
 readerDetails(811, 055, drita berisha, '2020-09-15', 25, dion, '2023-09-15').
 readerDetails(911, 066, driton kryeziu, '2019-11-25', 25, albi, '2022-11-25').
-readerDetails(101, ledion neziri, 011, '2021-04-12', 25, bledi, '2024-04-12').
-readerDetails(111, gezime krasniqi, 011, '2020-09-11', 25, bledi, '2023-09-11').
+readerDetails(101, 011,ledion neziri, '2021-04-12', 25, bledi, '2024-04-12').
+readerDetails(111, 011,gezime krasniqi, '2020-09-11', 25, bledi, '2023-09-11').
 readerDetails(121, 022, lea kamberi, '2021-02-05', 25, agron, '2024-02-05').
 
 query1(ID,Name,Lastname):-reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,State,City,Street,ZIPCode,Phone,Email,Profession),City='prishtine'.
