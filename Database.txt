@@ -136,9 +136,9 @@ DamagedBooks(64, 0076, 066, The Noonday Demon, Ripped, 2021-11-19, Albi)
 
 Relational Algebra
 
-1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
+1. Listoni tÃ« gjithÃ« lexuesit qÃ« janÃ« nga qyteti i PrishtinÃ«s.
  ( Reader)
-2. Cilët lexues (Emrin dhe Mbiemrin e tyre) kanë huazuar te pakten dy libra gjate vitit 2020?
+2. CilÃ«t lexues (Emrin dhe Mbiemrin e tyre) kanÃ« huazuar te pakten dy libra gjate vitit 2020?
 
 
 Datalog
@@ -156,6 +156,21 @@ reader(9, dion, dili, valdet, m, '1998-04-19', kosovo, vushtrri, vellusha, 17000
 reader(10, ledion, neziri, bejte, m, '1999-05-28', kosovo, lipjan, haxhi_zeka, 19000, '+377442389329/FAX:038289288', 'leddion@hotmail.com', student) .
 reader(11, dardan, gashi, suad, m, '2001-07-26', kosovo, skenderaj, xhelal_preveza, 14000, '+38349383988/FAX:038329879', 'dardangashi05@live.com', student) .
 reader(12, gezime, krasniqi, fadil, f, '2003-05-17', kosovo, kline, fuad_dibra, 17600, '+38349438298/FAX:038328948', 'gezimekras4@live.com', student) .
+
+%readerDetails(ID,worker_ID,Info,Registration,Price,Register,Subscript).
+
+readerDetails(111, 022, arta bekteshi, '2020-05-17', 25, agron, '2023-05-17').
+readerDetails(211, 044, morea selimi, '2021-07-26', 25, rajmonda, '2024-07-26').
+readerDetails(311, 044, agon jashari, '2020-05-28', 25, rajmonda, '2023-05-28').
+readerDetails(411, 033, dion dili, '2021-04-19', 25, jeta, '2024-04-19').
+readerDetails(511, 022, era gashi, '2020-11-29', 25, agron, '2023-11-29').
+readerDetails(611, 033, dardan gashi, '2019-09-13', 25, jeta, '2022-09-13').
+readerDetails(711, 055, ilir morina, '2019-05-28', 25, dion, '2022-05-28').
+readerDetails(811, 055, drita berisha, '2020-09-15', 25, dion, '2023-09-15').
+readerDetails(911, 066, driton kryeziu, '2019-11-25', 25, albi, '2022-11-25').
+readerDetails(101, ledion neziri, 011, '2021-04-12', 25, bledi, '2024-04-12').
+readerDetails(111, gezime krasniqi, 011, '2020-09-11', 25, bledi, '2023-09-11').
+readerDetails(121, 022, lea kamberi, '2021-02-05', 25, agron, '2024-02-05').
 
 query1(ID,Name,Lastname):-reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,State,City,Street,ZIPCode,Phone,Email,Profession),City='prishtine'.
 
