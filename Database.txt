@@ -78,6 +78,22 @@ Book(0099, 066, Levels of Life, Julian Barnes, 85, 2021-04-05, Albi)
 Book(0076, 066, The Noonday Demon, Andrew Solomon, 75, 2021-04-05, Albi)
 
 
+Borrowed(borrow_Book:integer, borrow_Reader:integer, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:string)
+
+Borrowed(00766, 111, 2021-11-17, 2021-12-01, 022, Not Damaged)
+Borrowed(00999, 211, 2021-11-26, 2021-12-10, 044, Damaged)
+Borrowed(00211, 311, 2021-11-28, 2021-12-12, 044, Not Damaged)
+Borrowed(00099, 411, 2021-11-19, 2021-11-25, 033, Not Damaged)
+Borrowed(00455, 511, 2021-11-29, 2021-12-13, 022, Not Damaged)
+Borrowed(00022, 611, 2021-11-13, 2021-11-27, 033, Damaged)
+Borrowed(00088, 711, 2021-11-28, 2021-12-12, 055, Not Damaged)
+Borrowed(00044, 811, 2021-11-15, 2021-11-29, 055, Not Damaged)
+Borrowed(00111, 911, 2021-11-25, 2021-12-09, 066, Not Damaged)
+Borrowed(00233, 101, 2021-11-12, 2021-11-26, 011, Damaged)
+Borrowed(00033, 111, 2021-11-11, 2021-11-25, 011, Not Damaged)
+Borrowed(00077, 121, 2021-11-05, 2021-11-19, 022, Not Damaged)
+
+
 
 
 
