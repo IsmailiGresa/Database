@@ -112,7 +112,23 @@ Archive(85, 511, 0099, Levels Of Life, Era Gashi)
 Archive84, 611, 0076, The Noonday Demon, Dardan Gashi)
 Archive(83, 711, 0004, The God Delusion, Ilir Morina)
 
+DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damaged_book:string, damage_Details:string, damage_Date:Date, damage_Register:integer)
 
+DamagedBooks(50, 0009, 044, Women & Power, Ripped, 2021-12-10, Bledi)
+DamagedBooks(51, 0007, 022, Life After Life, Ripped, 2021-12-12, Agron)
+DamagedBooks(52, 0023, 066, Wolf Hall, Ripped, 2021-12-10, Jeta)
+DamagedBooks(53, 0045, 055, Underland, Ripped, 2021-12-12, Rajmonda)
+DamagedBooks(54, 0011, 055, Bad Blood, Ripped, 2021-12-10, Dion)
+DamagedBooks(55, 0004, 066, The God Delusion, Ripped, 2021-11-19, Albi)
+DamagedBooks(56, 0023, 066, Wolf Hall, Ripped, 2021-12-10, Albi)
+DamagedBooks(57, 0056, 022, Outline by Rachel, Ripped, 2021-11-19, Agron)
+DamagedBooks(58, 0008, 033, On Writing, Ripped, 2021-12-10, Jeta)
+DamagedBooks(59, 0002, 044, The House of Grief, Ripped, 2021-12-12, Rajmonda)
+DamagedBooks(60, 0045, 055, Underland, Ripped, 2021-12-10, Dion)
+DamagedBooks(61, 0009, 044, Women & Power, Ripped, 2021-11-19, Rajmonda)
+DamagedBooks(62, 0021, 055, Night Watch, Ripped, 2021-12-10, Dion)
+DamagedBooks(63, 0099, 066, Levels Of Life, Ripped, 2021-12-12, Albi)
+DamagedBooks(64, 0076, 066, The Noonday Demon, Ripped, 2021-11-19, Albi)
 
 
 
