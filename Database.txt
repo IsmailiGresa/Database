@@ -2,6 +2,8 @@ Primary Key (Value)
 Foreign Key (Value)
 Unique (Value)
 Can be Null (Value)
+
+
 Reader(reader_ID:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
 
 ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Info:string, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
@@ -16,7 +18,11 @@ Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:int
 
 DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date, damage_Register:integer)
 
+
+
+
 Reader Relation:
+
 Reader(reader_ID:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
 Reader(1, Lea, Kamberi, Idriz, F, 1997-09-15,  Kosove, Ferizaj, Besim Hyseni, 12000, +38344832979/FAX:038238293, leakamberi1@gmail.com , Student)
 Reader(2, Arta, Bekteshi, Fatos, F, 2000-03-19, Kosovo, Peje, Agim Ramadani, 15000, +38349321321/FAX:038324893, aarta3@hotmail.com , Student)
@@ -30,6 +36,8 @@ Reader(9, Dion, Dili, Valdet, M, 1998-04-19, Kosovo, Vushtrri, Vellusha, 17000, 
 Reader(10, Ledion, Neziri, Bejte, M, 1999-05-28, Kosovo, Lipjan, Haxhi Zeka, 19000, +377442389329/FAX:038289288, leddion@hotmail.com , Student)
 Reader(11, Dardan, Gashi, Suad, M, 2001-07-26, Kosovo, Skenderaj, Xhelal Preveza, 14000, +38349383988/FAX:038329879, dardangashi05@live.com , Student)
 Reader(12, Gezime, Krasniqi, Fadil, F, 2003-05-17, Kosovo, Kline, Fuad Dibra, 17600, +38349438298/FAX:038328948, gezimekras4@live.com , Student)
+
+ReaderDetails Relation:
 
 ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Info:string, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
 
@@ -46,8 +54,9 @@ ReaderDetails(10, 011, Ledion Neziri, 2021-04-12, 25, Bledi, 2024-04-12)
 ReaderDetails(11, 011, Gezime Krasniqi, 2020-09-11, 25, Bledi, 2023-09-11)
 ReaderDetails(12, 022, Lea Kamberi, 2021-02-05, 25, Agron, 2024-02-05)
 
-Worker(worker_ID:integer, worker_Name:string, worker_Lastname:string, worker_Rank:string, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Salary:integer)
+Worker Relation:
 
+Worker(worker_ID:integer, worker_Name:string, worker_Lastname:string, worker_Rank:string, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Salary:integer)
 Worker(011, Bledi, Bekteshi, Librarian, Kosovo, Prishtine, Agon Ramadani, 15000, +38349329921/FAX:038321193, blendib@hotmail.com , 550)
 Worker(022, Agron, Veliu, Librarian, Kosovo, Peje, Vellezerit Frasheri, 20000, +38344328939/FAX:038558292, aagronn@live.com , 550)
 Worker(033, Jeta, Berisha, Librarian, Kosovo, Gjakove, Shaban  Kamberi, 13000, +38344243002/FAX:038003424, berishajeta@outlook.com , 550)
@@ -59,28 +68,28 @@ Worker(088, Zana, Rama, Janitor, Single, Kosovo, Vushtrri, Vellusha, 17000, +383
 Worker(099, Ana, Bejta, Assistant, Kosovo, Fushekosove, Haxhi Zeka, 19000, +38344238729/FAX:038221288, anaa2@hotmail.com , 450)
 Worker(010, Ariana, Gashi, Assistant, Kosovo, Skenderaj, Adem Jashari, 14000, +38349383921/FAX:038376879, arianagashi05@live.com , 450)
 
+Books Relation:
 
-Book(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:string)
+Books(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:string)
+Books(0003, 011, The Road, Cormac McCarthy, Tragedy, 80, 2020-01-05, Bledi)
+Books(0007, 022, Life After Life, Kate Atkinson, Historical Fiction, 80, 2020-02-05, Agron)
+Books(0005, 033, Darkmans, Nicola Braker, Fiction, 75, 2021-08-05, Jeta)
+Books(0006, 044, The Siege, Helen Dunmore, Mystery, 90, 2021-04-05, Rajmonda)
+Books(0011, 055, Bad Blood, Lorna Sage, True Crime, 85, 2020-01-05, Dion)
+Books(0004, 066, The God Delusion, Richard Dawkins, Non-Fiction, 100, 2021-04-05, Albi)
+Books(0023, 066, Wolf Hall, Hilary Mantel, Historical Fiction, 95, 2021-04-05, Albi)
+Books(0056, 022, Outline by Rachel, Cusk, Psychological Fiction, 80, 2020-01-05, Agron)
+Books(0008, 033, On Writing, Stephen King, Fantasy, 85, 2020-02-05, Jeta)
+Books(0002, 044, The House of Grief, Helen Garner, True Crime, 75, 2020-02-05, Rajmonda)
+Books(0045, 055, Underland, Robert Macfarlane, Non-Fiction, 85, 2020-01-05, Dion)
+Books(0009, 044, Women & Power, Mary Beard, History, 95, 2020-02-05, Rajmonda)
+Books(0021, 055, Night Watch, Terry Pratchett, History, 90, 2020-01-05, Dion)
+Books(0099, 066, Levels Of Life, Julian Barnes, Memoir, 85, 2021-04-05, Albi)
+Books(0076, 066, The Noonday Demon, Andrew Solomon, Memoir, 75, 2021-04-05, Albi)
 
-Book(0003, 011, The Road, Cormac McCarthy, Tragedy, 80, 2020-01-05, Bledi)
-Book(0007, 022, Life After Life, Kate Atkinson, Historical Fiction, 80, 2020-02-05, Agron)
-Book(0005, 033, Darkmans, Nicola Braker, Fiction, 75, 2021-08-05, Jeta)
-Book(0006, 044, The Siege, Helen Dunmore, Mystery, 90, 2021-04-05, Rajmonda)
-Book(0011, 055, Bad Blood, Lorna Sage, True Crime, 85, 2020-01-05, Dion)
-Book(0004, 066, The God Delusion, Richard Dawkins, Non-Fiction, 100, 2021-04-05, Albi)
-Book(0023, 066, Wolf Hall, Hilary Mantel, Historical Fiction, 95, 2021-04-05, Albi)
-Book(0056, 022, Outline by Rachel, Cusk, Psychological Fiction, 80, 2020-01-05, Agron)
-Book(0008, 033, On Writing, Stephen King, Fantasy, 85, 2020-02-05, Jeta)
-Book(0002, 044, The House of Grief, Helen Garner, True Crime, 75, 2020-02-05, Rajmonda)
-Book(0045, 055, Underland, Robert Macfarlane, Non-Fiction, 85, 2020-01-05, Dion)
-Book(0009, 044, Women & Power, Mary Beard, History, 95, 2020-02-05, Rajmonda)
-Book(0021, 055, Night Watch, Terry Pratchett, History, 90, 2020-01-05, Dion)
-Book(0099, 066, Levels Of Life, Julian Barnes, Memoir, 85, 2021-04-05, Albi)
-Book(0076, 066, The Noonday Demon, Andrew Solomon, Memoir, 75, 2021-04-05, Albi)
-
+Borrowed Relation:
 
 Borrowed(book_ID:integer, reader_ID:integer, borrow_Reader:string, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:integer)
-
 Borrowed(00766, 1, 111, 2020-11-17, 2020-12-01, 022, 15)
 Borrowed(00999, 5, 211, 2019-11-26, 2019-12-10, 044, 15)
 Borrowed(00211, 1, 311, 2020-11-28, 2020-12-12, 044, 15)
@@ -94,9 +103,9 @@ Borrowed(00233, 3, 101, 2019-11-12, 2019-11-26, 011, 20)
 Borrowed(00033, 11, 111, 2020-11-11, 2020-11-25, 011, 15)
 Borrowed(00077, 12, 121, 2021-11-05, 2021-11-19, 022, 18)
 
+Archive Relation:
 
 Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:string, archive_Reader:string)
-
 Archive(98, 111, 0003, The Road, Arta Bekteshi)
 Archive(97, 211, 0007, Life After Life, Morea Selimi)
 Archive(96, 311, 0005, Darkmans, Agon Jashari)
@@ -114,8 +123,9 @@ Archive(85, 511, 0099, Levels Of Life, Era Gashi)
 Archive(84, 611, 0076, The Noonday Demon, Dardan Gashi)
 Archive(83, 711, 0004, The God Delusion, Ilir Morina)
 
-DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damaged_book:string, damage_Details:string, damage_Date:Date, damage_Register:integer)
+DamagedBooks Relation:
 
+DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damaged_book:string, damage_Details:string, damage_Date:Date, damage_Register:integer)
 DamagedBooks(50, 0009, 044, Women & Power, Ripped, 2021-12-10, Bledi)
 DamagedBooks(51, 0007, 022, Life After Life, Ripped, 2021-12-12, Agron)
 DamagedBooks(52, 0023, 066, Wolf Hall, Ripped, 2021-12-10, Jeta)
@@ -136,12 +146,15 @@ DamagedBooks(64, 0076, 066, The Noonday Demon, Ripped, 2021-11-19, Albi)
 
 
 
+
+
 Relational Algebra
+
 
 1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
  ( Reader)
 2. Cilët lexues (Emrin dhe Mbiemrin e tyre) kanë huazuar te pakten dy libra gjate vitit 2020?
- ?  User)))
+ ?  Reader)))
 3. Listoni lexuesit te cilet e kane vonuar kthimin e librit ne afatin 15 ditesh per vitin 2020 ose 2021.
 
 4. Listoni ID-të dhe titullin e librave qe ne vitin 2019 ose 2020 jane huazur se paku nje here kurse ne vitin 2021 asnjehere.
@@ -150,7 +163,6 @@ Relational Algebra
 Datalog
 
 %reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,State,City,Street,ZIPCode,Phone,Email,Profession).
-
 reader(1, lea, kamberi, idriz, f, '1997-09-15', kosovo, ferizaj, besim_hyseni, 12000, '+38344832979/FAX:038238293', 'leakamberi1@gmail.com', student) .
 reader(2, arta, bekteshi, fatos, f, '2000-03-19', kosovo, peje, agim_ramadani, 15000, '+38349321321/FAX:038324893', 'aarta3@hotmail.com', student) .
 reader(3, driton, kryeziu, ilaz, m, '1999-08-12', kosovo, prizren, vellezerit_frasheri, 20000, '+37744328239/FAX:038348292', 'ddritonn@live.com', student) .
@@ -169,8 +181,9 @@ query1(ID,Name,Lastname):-reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,Stat
  
 
 
-%borrowed(Book,ID,Bread,Bkeep,Breturn,Bregister,Battention) .
 
+
+%borrowed(Book,ID,Bread,Bkeep,Breturn,Bregister,Battention) .
 borrowed(00766, 1, 111, '2020-11-17', '2020-12-01', 022, 15) .
 borrowed(00999, 5, 211, '2019-11-26', '2019-12-10', 044, 15) . 
 borrowed(00211, 1, 311, '2020-11-28', '2020-12-12', 044, 15) .
@@ -184,9 +197,7 @@ borrowed(00233, 3, 101, '2019-11-12', '2019-11-26', 011, 20) .
 borrowed(00033, 11, 111, '2020-11-11', '2020-11-25', 011, 15) .
 borrowed(00077, 12, 121, '2021-11-05', '2021-11-19', 022, 18) .
 
-
 %books(Book, Worker,Title,Author,Genre,Copies,Acceptdate,Register) .
-
 books(0003, 011, the_road, cormac_mccarthy, tragedy, 80, '2020-01-05', bledi) .
 books(0007, 022, life_after_life, kate_atkinson, historical_fiction, 80, '2020-02-05', agron) .
 books(0005, 033, darkmans, nicola_braker, fiction, 75, '2021-08-05', jeta) .
