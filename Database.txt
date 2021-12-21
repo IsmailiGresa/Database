@@ -1,3 +1,29 @@
+
+ 
+
+                                                      
+
+UNIVERSITETI I PRISHTINËS “HASAN PRISHTINA”
+Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike
+Drejtimi: Inxhinieri Kompjuterike
+ 
+
+
+
+
+Lënda: Bazat e të Dhënave
+ 
+
+PROJEKTI: BAZA E TË DHËNAVE PËR MENAXHIMIN E BIBLIOTEKËS
+ 
+(FAZA 1)
+
+
+
+Prof. Dr. Lule Ahmedi                                                             Grupi 18:
+MSc. Dalinë Vranovci                                                             Gresa Ismaili
+                                                                                                 Klodian Krasniqi   
+
 Primary Key (Value)
 Foreign Key (Value)
 Unique (Value)
@@ -6,17 +32,17 @@ Can be Null (Value)
 
 Reader(reader_ID:integer, read_Name:string, read_Lastname:string, read_Parent: string, read_Gender:string(char), read_DateofBirth:Date, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Profession:string)
 
-ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Info:string, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
+ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Registration:Date, reader_Price:integer, reader_Subscript:Date)
 
-Worker(worker_ID:integer, wroker_Name:string, worker_Lastname:string, worker_Rank:string, read_State:string, read_City:string, read_Street:string, read_ZIPCode:integer, read_Phone:string, read_Email:string, read_Salary:integer)
+Worker(worker_ID:integer, worker_Name:string, worker_Lastname:string, worker_Rank:string, worker_State:string, worker_City:string, worker_Street:string, worker_ZIPCode:integer, worker_Phone:string, worker_Email:string, worker_Salary:integer)
 
-Book(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:integer)
+Books(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date)
 
-Borrowed(borrow_Book:integer, borrow_Reader:integer, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:string)
+Borrowed(book_ID:integer, reader_ID:integer, borrow_Date:Date, borrow_Keep:Date, borrow_Return:Date, worker_ID:integer, borrow_Attention:integer)
 
-Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:integer, archive_Reader:integer)
+Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:integer)
 
-DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date, damage_Register:integer)
+DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date)
 
 
 
@@ -39,20 +65,20 @@ Reader(12, Gezime, Krasniqi, Fadil, F, 2003-05-17, Kosovo, Kline, Fuad Dibra, 17
 
 ReaderDetails Relation:
 
-ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Info:string, reader_Registration:Date, reader_Price:integer, reader_Register:integer, reader_Subscript:Date)
+ReaderDetails(reader_ID:integer, worker_ID:integer, reader_Registration:Date, reader_Price:integer, reader_Subscript:Date)
 
-ReaderDetails(1, 022, Arta Bekteshi, 2020-05-17, 25, Agron, 2023-05-17)
-ReaderDetails(2, 044, Morea Selimi, 2021-07-26, 25, Rajmonda, 2024-07-26)
-ReaderDetails(3, 044, Agon Jashari, 2020-05-28, 25, Rajmonda, 2023-05-28)
-ReaderDetails(4, 033, Dion Dili, 2021-04-19, 25, Jeta, 2024-04-19)
-ReaderDetails(5, 022, Era Gashi, 2020-11-29, 25, Agron, 2023-11-29)
-ReaderDetails(6, 033, Dardan Gashi, 2019-09-13, 25, Jeta, 2022-09-13)
-ReaderDetails(7, 055, Ilir Morina, 2019-05-28, 25, Dion, 2022-05-28)
-ReaderDetails(8, 055, Drita Berisha, 2020-09-15, 25, Dion, 2023-09-15)
-ReaderDetails(9, 066, Driton Kryeziu, 2019-11-25, 25, Albi, 2022-11-25)
-ReaderDetails(10, 011, Ledion Neziri, 2021-04-12, 25, Bledi, 2024-04-12)
-ReaderDetails(11, 011, Gezime Krasniqi, 2020-09-11, 25, Bledi, 2023-09-11)
-ReaderDetails(12, 022, Lea Kamberi, 2021-02-05, 25, Agron, 2024-02-05)
+ReaderDetails(1, 022, 2020-05-17, 25, 2023-05-17)
+ReaderDetails(2, 044, 2021-07-26, 25, 2024-07-26)
+ReaderDetails(3, 044, 2020-05-28, 25, 2023-05-28)
+ReaderDetails(4, 033, 2021-04-19, 25, 2024-04-19)
+ReaderDetails(5, 022, 2020-11-29, 25, 2023-11-29)
+ReaderDetails(6, 033, 2019-09-13, 25, 2022-09-13)
+ReaderDetails(7, 055,  2019-05-28, 25, 2022-05-28)
+ReaderDetails(8, 055, 2020-09-15, 25, 2023-09-15)
+ReaderDetails(9, 066, 2019-11-25, 25, 2022-11-25)
+ReaderDetails(10, 011, 2021-04-12, 25, 2024-04-12)
+ReaderDetails(11, 011, 2020-09-11, 25, 2023-09-11)
+ReaderDetails(12, 022, 2021-02-05, 25, 2024-02-05)
 
 Worker Relation:
 
@@ -70,77 +96,77 @@ Worker(010, Ariana, Gashi, Assistant, Kosovo, Skenderaj, Adem Jashari, 14000, +3
 
 Books Relation:
 
-Books(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date, book_Register:string)
-Books(0003, 011, The Road, Cormac McCarthy, Tragedy, 80, 2020-01-05, Bledi)
-Books(0007, 022, Life After Life, Kate Atkinson, Historical Fiction, 80, 2020-02-05, Agron)
-Books(0005, 033, Darkmans, Nicola Braker, Fiction, 75, 2021-08-05, Jeta)
-Books(0006, 044, The Siege, Helen Dunmore, Mystery, 90, 2021-04-05, Rajmonda)
-Books(0011, 055, Bad Blood, Lorna Sage, True Crime, 85, 2020-01-05, Dion)
-Books(0004, 066, The God Delusion, Richard Dawkins, Non-Fiction, 100, 2021-04-05, Albi)
-Books(0023, 066, Wolf Hall, Hilary Mantel, Historical Fiction, 95, 2021-04-05, Albi)
-Books(0056, 022, Outline by Rachel, Cusk, Psychological Fiction, 80, 2020-01-05, Agron)
-Books(0008, 033, On Writing, Stephen King, Fantasy, 85, 2020-02-05, Jeta)
-Books(0002, 044, The House of Grief, Helen Garner, True Crime, 75, 2020-02-05, Rajmonda)
-Books(0045, 055, Underland, Robert Macfarlane, Non-Fiction, 85, 2020-01-05, Dion)
-Books(0009, 044, Women & Power, Mary Beard, History, 95, 2020-02-05, Rajmonda)
-Books(0021, 055, Night Watch, Terry Pratchett, History, 90, 2020-01-05, Dion)
-Books(0099, 066, Levels Of Life, Julian Barnes, Memoir, 85, 2021-04-05, Albi)
-Books(0076, 066, The Noonday Demon, Andrew Solomon, Memoir, 75, 2021-04-05, Albi)
+Books(book_ID:integer, worker_ID:integer, book_Title:string, book_Author:string, book_Genre:string, book_Copies:integer, book_AcceptDate:Date)
+Books(0003, 011, The Road, Cormac McCarthy, Tragedy, 80, 2020-01-05)
+Books(0007, 022, Life After Life, Kate Atkinson, Historical Fiction, 80, 2020-02-05)
+Books(0005, 033, Darkmans, Nicola Braker, Fiction, 75, 2021-08-05)
+Books(0006, 044, The Siege, Helen Dunmore, Mystery, 90, 2021-04-05)
+Books(0011, 055, Bad Blood, Lorna Sage, True Crime, 85, 2020-01-05)
+Books(0004, 066, The God Delusion, Richard Dawkins, Non-Fiction, 100, 2021-04-05)
+Books(0023, 066, Wolf Hall, Hilary Mantel, Historical Fiction, 95, 2021-04-05)
+Books(0056, 022, Outline by Rachel, Cusk, Psychological Fiction, 80, 2020-01-05)
+Books(0008, 033, On Writing, Stephen King, Fantasy, 85, 2020-02-05)
+Books(0002, 044, The House of Grief, Helen Garner, True Crime, 75, 2020-02-05)
+Books(0045, 055, Underland, Robert Macfarlane, Non-Fiction, 85, 2020-01-05)
+Books(0009, 044, Women & Power, Mary Beard, History, 95, 2020-02-05)
+Books(0021, 055, Night Watch, Terry Pratchett, History, 90, 2020-01-05)
+Books(0099, 066, Levels Of Life, Julian Barnes, Memoir, 85, 2021-04-05)
+Books(0076, 066, The Noonday Demon, Andrew Solomon, Memoir, 75, 2021-04-05)
 
 Borrowed Relation:
 
-Borrowed(book_ID:integer, reader_ID:integer, borrow_Reader:string, borrow_Keep:integer, borrow_Return:Date, borrow_Register:integer, borrow_Attention:integer)
-Borrowed(00766, 1, 111, 2020-11-17, 2020-12-01, 022, 15)
-Borrowed(00999, 5, 211, 2019-11-26, 2019-12-10, 044, 15)
-Borrowed(00211, 1, 311, 2020-11-28, 2020-12-12, 044, 15)
-Borrowed(00099, 2, 411, 2021-11-19, 2021-11-25, 033, 17)
-Borrowed(00455, 5, 511, 2019-11-29, 2019-12-13, 022, 15)
-Borrowed(00022, 6, 611, 2021-11-13, 2021-11-27, 033, 18)
-Borrowed(00088, 3, 711, 2020-11-28, 2020-12-12, 055, 19)
-Borrowed(00044, 10, 811, 2021-11-15, 2021-11-29, 055, 16)
-Borrowed(00111, 7, 911, 2021-11-25, 2021-12-09, 066, 15)
-Borrowed(00233, 3, 101, 2019-11-12, 2019-11-26, 011, 20)
-Borrowed(00033, 11, 111, 2020-11-11, 2020-11-25, 011, 15)
-Borrowed(00077, 12, 121, 2021-11-05, 2021-11-19, 022, 18)
+Borrowed(book_ID:integer, reader_ID:integer, borrow_Date:Date, borrow_Keep:Date, borrow_Return:Date, worker_ID:integer, borrow_Attention:integer)
+Borrowed(0076, 1, 111, 2020-11-17, 2020-12-02, 2020-12-02, 022, 15)
+Borrowed(0099, 5, 211, 2019-11-26, 2019-12-11, 2019-12-11, 044, 15)
+Borrowed(0021, 1, 311, 2020-11-28, 2020-12-13, 2020-12-13, 044, 15)
+Borrowed(0009, 2, 411, 2021-11-19, 2021-11-28, 2021-11-26, 033, 17)
+Borrowed(0045, 5, 511, 2019-11-29, 2019-12-14, 2019-12-14, 022, 15)
+Borrowed(0002, 6, 611, 2021-11-13, 2021-12-01, 2021-11-28, 033, 18)
+Borrowed(0008, 3, 711, 2020-11-28, 2020-12-21, 2020-12-17, 055, 19)
+Borrowed(0004, 10, 811, 2021-11-15, 2021-12-01, 2021-11-30, 055, 16)
+Borrowed(0011, 7, 911, 2021-11-25, 2021-12-10, 2021-12-10, 066, 15)
+Borrowed(0023, 3, 101, 2019-11-12, 2019-12-02, 2019-11-27, 011, 20)
+Borrowed(0003, 11, 111, 2020-11-11, 2020-11-26, 2020-11-26, 011, 15)
+Borrowed(0007, 12, 121, 2021-11-05, 2021-11-23, 2021-11-20, 022, 18)
 
 Archive Relation:
 
-Archive(archive_ID:integer, reader_ID:integer, book_ID:integer, archive_Book:string, archive_Reader:string)
-Archive(98, 111, 0003, The Road, Arta Bekteshi)
-Archive(97, 211, 0007, Life After Life, Morea Selimi)
-Archive(96, 311, 0005, Darkmans, Agon Jashari)
-Archive(95, 411, 0006, The Siege, Dion Dili)
-Archive(94, 511, 0011, Bad Blood, Era Gashi)
-Archive(93, 611, 0004, The God Delusion, Dardani Gashi)
-Archive(92, 711, 0023, Wolf Hall, Ilir Morina)
-Archive(91, 811, 0056, Outline by Rachel, Drita Berisha)
-Archive(90, 911, 0004, The God Delusion, Driton Kryeziu)
-Archive(89, 101, 0002, The House of Grief, Ledion Kryeziu)
-Archive(88, 111, 0004, The God Delusion, Arta Bekteshi)
-Archive(87, 121, 0045, Underland, Lea Kamberi)
-Archive(86, 411, 0021, Night Watch, Dion Dili)
-Archive(85, 511, 0099, Levels Of Life, Era Gashi)
-Archive(84, 611, 0076, The Noonday Demon, Dardan Gashi)
-Archive(83, 711, 0004, The God Delusion, Ilir Morina)
+Archive(archive_ID:integer, reader_ID:integer, book_ID:integer)
+Archive(98, 111, 0003)
+Archive(97, 211, 0007)
+Archive(96, 311, 0005)
+Archive(95, 411, 0006)
+Archive(94, 511, 0011)
+Archive(93, 611, 0004)
+Archive(92, 711, 0023)
+Archive(91, 811, 0056)
+Archive(90, 911, 0004)
+Archive(89, 101, 0002)
+Archive(88, 111, 0004)
+Archive(87, 121, 0045)
+Archive(86, 411, 0021)
+Archive(85, 511, 0099)
+Archive(84, 611, 0076)
+Archive(83, 711, 0004)
 
 DamagedBooks Relation:
 
-DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damaged_book:string, damage_Details:string, damage_Date:Date, damage_Register:integer)
-DamagedBooks(50, 0009, 044, Women & Power, Ripped, 2021-12-10, Bledi)
-DamagedBooks(51, 0007, 022, Life After Life, Ripped, 2021-12-12, Agron)
-DamagedBooks(52, 0023, 066, Wolf Hall, Ripped, 2021-12-10, Jeta)
-DamagedBooks(53, 0045, 055, Underland, Ripped, 2021-12-12, Rajmonda)
-DamagedBooks(54, 0011, 055, Bad Blood, Ripped, 2021-12-10, Dion)
-DamagedBooks(55, 0004, 066, The God Delusion, Ripped, 2021-11-19, Albi)
-DamagedBooks(56, 0023, 066, Wolf Hall, Ripped, 2021-12-10, Albi)
-DamagedBooks(57, 0056, 022, Outline by Rachel, Ripped, 2021-11-19, Agron)
-DamagedBooks(58, 0008, 033, On Writing, Ripped, 2021-12-10, Jeta)
-DamagedBooks(59, 0002, 044, The House of Grief, Ripped, 2021-12-12, Rajmonda)
-DamagedBooks(60, 0045, 055, Underland, Ripped, 2021-12-10, Dion)
-DamagedBooks(61, 0009, 044, Women & Power, Ripped, 2021-11-19, Rajmonda)
-DamagedBooks(62, 0021, 055, Night Watch, Ripped, 2021-12-10, Dion)
-DamagedBooks(63, 0099, 066, Levels Of Life, Ripped, 2021-12-12, Albi)
-DamagedBooks(64, 0076, 066, The Noonday Demon, Ripped, 2021-11-19, Albi)
+DamagedBooks(damage_ID:integer, book_ID:integer, worker_ID:integer, damage_Details:string, damage_Date:Date)
+DamagedBooks(50, 0009, 044, Ripped, 2021-12-10)
+DamagedBooks(51, 0007, 022, Ripped, 2021-12-12)
+DamagedBooks(52, 0023, 066, Ripped, 2021-12-10)
+DamagedBooks(53, 0045, 055, Ripped, 2021-12-12)
+DamagedBooks(54, 0011, 055, Ripped, 2021-12-10)
+DamagedBooks(55, 0004, 066, Ripped, 2021-11-19)
+DamagedBooks(56, 0023, 066, Ripped, 2021-12-10)
+DamagedBooks(57, 0056, 022, Ripped, 2021-11-19)
+DamagedBooks(58, 0008, 033, Ripped, 2021-12-10)
+DamagedBooks(59, 0002, 044, Ripped, 2021-12-12)
+DamagedBooks(60, 0045, 055, Ripped, 2021-12-10)
+DamagedBooks(61, 0009, 044, Ripped, 2021-11-19)
+DamagedBooks(62, 0021, 055, Ripped, 2021-12-10)
+DamagedBooks(63, 0099, 066, Ripped, 2021-12-12)
+DamagedBooks(64, 0076, 066, Ripped, 2021-11-19)
 
 
 
@@ -149,7 +175,6 @@ DamagedBooks(64, 0076, 066, The Noonday Demon, Ripped, 2021-11-19, Albi)
 
 
 Relational Algebra
-
 
 1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
  ( Reader)
@@ -180,22 +205,19 @@ query1(ID,Name,Lastname):-reader(ID,Name,Lastname,Parent,Gender,DateOfBirth,Stat
 
  
 
-
-
-
-%borrowed(Book,ID,Bread,Bkeep,Breturn,Bregister,Battention) .
-borrowed(00766, 1, 111, '2020-11-17', '2020-12-01', 022, 15) .
-borrowed(00999, 5, 211, '2019-11-26', '2019-12-10', 044, 15) . 
-borrowed(00211, 1, 311, '2020-11-28', '2020-12-12', 044, 15) .
-borrowed(00099, 2, 411, '2021-11-19', '2021-11-25', 033, 17) .
-borrowed(00455, 5, 511, '2019-11-29', '2019-12-13', 022, 15) .
-borrowed(00022, 6, 611, '2021-11-13', '2021-11-27', 033, 18) .
-borrowed(00088, 3, 711, '2020-11-28', '2020-12-12', 055, 19) .
-borrowed(00044, 10, 811, '2021-11-15', '2021-11-29', 055, 16) . 
-borrowed(00111, 7, 911, '2021-11-25', '2021-12-09', 066, 15) .
-borrowed(00233, 3, 101, '2019-11-12', '2019-11-26', 011, 20) . 
-borrowed(00033, 11, 111, '2020-11-11', '2020-11-25', 011, 15) .
-borrowed(00077, 12, 121, '2021-11-05', '2021-11-19', 022, 18) .
+%borrowed(Book,ID,Bdate,Bkeep,Breturn,Bregister,Battention) .
+borrowed(0076, 1, 111, '2020-11-17', '2020-12-02', '2020-12-01', 022, 15) .
+borrowed(0099, 5, 211, '2019-11-26', '2019-12-11', '2019-12-10', 044, 15) . 
+borrowed(0021, 1, 311, '2020-11-28', '2020-12-13', '2020-12-12', 044, 15) .
+borrowed(0009, 2, 411, '2021-11-19', '2021-11-28', '2021-11-25', 033, 17) .
+borrowed(0045, 5, 511, '2019-11-29', '2019-12-14', '2019-12-13', 022, 15) .
+borrowed(0002, 6, 611, '2021-11-13', '2021-12-01', '2021-11-27', 033, 18) .
+borrowed(0008, 3, 711, '2020-11-28', '2020-12-21', '2020-12-12', 055, 19) .
+borrowed(0004, 10, 811, '2021-11-15', '2021-12-01', '2021-11-29', 055, 16) . 
+borrowed(0011, 7, 911, '2021-11-25', '2021-12-10', '2021-12-09', 066, 15) .
+borrowed(0023, 3, 101, '2019-11-12', '2019-12-02', '2019-11-26', 011, 20) . 
+borrowed(0003, 11, 111, '2020-11-11', '2020-11-26', '2020-11-25', 011, 15) .
+borrowed(0007, 12, 121, '2021-11-05', '2021-11-23', '2021-11-19', 022, 18) .
 
 %books(Book, Worker,Title,Author,Genre,Copies,Acceptdate,Register) .
 books(0003, 011, the_road, cormac_mccarthy, tragedy, 80, '2020-01-05', bledi) .
