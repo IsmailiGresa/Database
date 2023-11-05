@@ -3,26 +3,26 @@
 
                                                       
 
-UNIVERSITETI I PRISHTINËS “HASAN PRISHTINA”
-Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike
+UNIVERSITETI I PRISHTINÃ‹S â€œHASAN PRISHTINAâ€
+Fakulteti i InxhinierisÃ« Elektrike dhe Kompjuterike
 Drejtimi: Inxhinieri Kompjuterike
  
 
 
 
 
-Lënda: Bazat e të Dhënave
- 
+LÃ«nda: Bazat e tÃ« DhÃ«nave
+Â 
 
-PROJEKTI: BAZA E TË DHËNAVE PËR MENAXHIMIN E BIBLIOTEKËS
- 
+PROJEKTI: BAZA E TÃ‹ DHÃ‹NAVE PÃ‹R MENAXHIMIN E BIBLIOTEKÃ‹S
+Â 
 (FAZA 1)
 
 
 
-Prof. Dr. Lule Ahmedi                                                             Grupi 18:
-MSc. Dalinë Vranovci                                                             Gresa Ismaili
-                                                                                                 Klodian Krasniqi   
+Prof. Dr. Lule Ahmedi Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Grupi 18:
+MSc. DalinÃ« VranovciÂ  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â Gresa Ismaili
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  
 
 Primary Key (Value)
 Foreign Key (Value)
@@ -176,13 +176,13 @@ DamagedBooks(64, 0076, 066, Ripped, 2021-11-19)
 
 Relational Algebra
 
-1. Listoni të gjithë lexuesit që janë nga qyteti i Prishtinës.
+1. Listoni tÃ« gjithÃ« lexuesit qÃ« janÃ« nga qyteti i PrishtinÃ«s.
  ( Reader)
-2. Cilët lexues (Emrin dhe Mbiemrin e tyre) kanë huazuar te pakten dy libra gjate vitit 2020?
+2. CilÃ«t lexues (Emrin dhe Mbiemrin e tyre) kanÃ« huazuar te pakten dy libra gjate vitit 2020?
  ?  Reader)))
 3. Listoni lexuesit te cilet e kane vonuar kthimin e librit ne afatin 15 ditesh per vitin 2020 ose 2021.
 
-4. Listoni ID-të dhe titullin e librave qe ne vitin 2019 ose 2020 jane huazur se paku nje here kurse ne vitin 2021 asnjehere.
+4. Listoni ID-tÃ« dhe titullin e librave qe ne vitin 2019 ose 2020 jane huazur se paku nje here kurse ne vitin 2021 asnjehere.
 
 
 Datalog
